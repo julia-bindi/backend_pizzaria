@@ -1,3 +1,5 @@
+const { encryptor } = require("../helpers");
+
 'use strict';
 const {
   Model
@@ -29,5 +31,14 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'idCliente'
     })
   }
+
+  Cliente.beforeSave(async (cliente, options) => {
+    const senha = await encryptor.hashPassword(cliente.senha);
+    if (cliente.changed("senha")) {
+      Object.assign(cliente, { senha });
+    }
+    return cliente;
+  });
+
   return Cliente;
 };
