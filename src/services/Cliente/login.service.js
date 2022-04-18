@@ -12,7 +12,7 @@ module.exports.login = async (email, senha) => {
   if (!cliente) {
     throw {
       status: StatusCodes.NOT_FOUND,
-      message: messages.notFound("cliente"),
+      message: messages.notFound("client"),
     };
   }
 
