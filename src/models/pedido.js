@@ -16,7 +16,8 @@ module.exports = (sequelize, DataTypes) => {
   Pedido.init({
     idEndereco: DataTypes.INTEGER,
     produtos: DataTypes.STRING,
-    precoFinal: DataTypes.DOUBLE
+    precoFinal: DataTypes.DOUBLE,
+    comentario: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Pedido',

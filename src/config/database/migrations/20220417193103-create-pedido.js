@@ -23,6 +23,9 @@ module.exports = {
       precoFinal: {
         type: Sequelize.DOUBLE
       },
+      comentario:{
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
