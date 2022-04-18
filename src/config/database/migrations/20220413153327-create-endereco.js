@@ -2,10 +2,15 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Enderecos', {
+      id: {
+        allowNull: false,
+        autoIncrement: true,
+        unique: true,
+        type: Sequelize.INTEGER
+      },
       idCliente: {
         allowNull: false,
         primaryKey: true,
-        foreighKey: true,
         type: Sequelize.INTEGER,
         references: {
           model: 'Clientes',
@@ -15,6 +20,7 @@ module.exports = {
       },
       cep: {
         primaryKey: true,
+        allowNull: false,
         type: Sequelize.STRING
       },
       bairro: {
@@ -25,6 +31,7 @@ module.exports = {
       },
       numero: {
         primaryKey: true,
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       complemento: {

@@ -31,6 +31,11 @@ module.exports = (sequelize, DataTypes) => {
       onDelete: 'CASCADE'
     })
   }
+  Endereco.associate = function(models) {
+    Endereco.hasMany(models.Pedido, {
+      foreignKey: 'idEndereco'
+    })
+  }
 
   return Endereco;
 };

@@ -1,30 +1,26 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Produtos', {
+    await queryInterface.createTable('Pedidos', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
+        unique: 'perdido_unico',
         type: Sequelize.INTEGER
       },
-      tipo: {
-        type: Sequelize.STRING,
-        validate:{
-          isIn: {
-            args: [['comida', 'bebida', 'promoção']],
-            msg: "Precisa ser to tipo comida, bebida ou promoção"
-          }
+      idEndereco: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Enderecos',
+          key: 'id',
+          as: 'idEndereco'
         }
       },
-      nome: {
-        unique: true,
+      produtos: {
         type: Sequelize.STRING
       },
-      descricao: {
-        type: Sequelize.STRING
-      },
-      preco: {
+      precoFinal: {
         type: Sequelize.DOUBLE
       },
       createdAt: {
@@ -38,6 +34,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Produtos');
+    await queryInterface.dropTable('Pedidos');
   }
 };
