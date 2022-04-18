@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Pedido.associate = function(models) {
-    Pedido.belongsToMany(models.Endereco, {
+    Pedido.belongsTo(models.Endereco, {
       foreignKey: 'idEndereco',
       onDelete: 'CASCADE'
     })
