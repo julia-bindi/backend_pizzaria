@@ -27,7 +27,7 @@ module.exports.novoEndereco = async (idCliente, cep, bairro, rua, numero, comple
         updatedAt: new Date()
     }
 
-    enderecoRepository.create(novoEndereco)
-  
-    return 
+    const inserted = await enderecoRepository.create(novoEndereco)
+
+    return inserted
 };
