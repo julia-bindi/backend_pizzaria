@@ -27,6 +27,14 @@ module.exports = {
       preco: {
         type: Sequelize.DOUBLE
       },
+      imagem: {
+        type: Sequelize.STRING,
+        validate:{
+          isUrl:{
+            msg: "Precisa ser uma url"
+          }
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

@@ -5,7 +5,7 @@ module.exports = {
     hello: async (req, res) => {
         try {
             const response = await HelloService.hello()
-
+            res.setHeader("Access-Control-Allow-Origin", "*");
             return res.status(StatusCodes.OK).json(response);
         } catch (error) {
             console.log(error);

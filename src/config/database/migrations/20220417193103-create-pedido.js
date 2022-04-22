@@ -26,6 +26,14 @@ module.exports = {
       comentario:{
         type: Sequelize.STRING
       },
+      status: {
+        type: Sequelize.STRING,
+        validate:{
+          isIn: {
+            args: [['processando', 'fazendo','entregue']]
+          }
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

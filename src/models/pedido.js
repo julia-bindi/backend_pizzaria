@@ -17,7 +17,8 @@ module.exports = (sequelize, DataTypes) => {
     idEndereco: DataTypes.INTEGER,
     produtos: DataTypes.STRING,
     precoFinal: DataTypes.DOUBLE,
-    comentario: DataTypes.STRING
+    comentario: DataTypes.STRING,
+    status: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Pedido',
