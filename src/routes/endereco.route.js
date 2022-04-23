@@ -4,7 +4,7 @@ const { isAuthorized } = require("../middlewares");
 
 router.use(isAuthorized)
 
-router.post("/novo", EnderecosController.novoEndereco)
-router.get("/get", EnderecosController.getEnderecos)
+router.post("/novo", EnderecosController.novo)
+router.get("/get", EnderecosController.get)
 
 module.exports.endereco = router;

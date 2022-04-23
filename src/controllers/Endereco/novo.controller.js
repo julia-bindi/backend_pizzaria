@@ -6,7 +6,7 @@ const { constants } = require("../../utils");
 const yup = require("yup");
 
 module.exports = {
-    novoEndereco: async (req, res) =>{
+    novo: async (req, res) =>{
         try{
             const schema = yup.object().shape({
                 cep: yup.string().required(),
@@ -26,7 +26,7 @@ module.exports = {
             const verify = promisify(jwt.verify);
             const logged_user = await verify(token, constants.jwtToken);
             
-            const response = await EnderecoService.novoEndereco(logged_user.id, cep, bairro, rua, numero, complemento);
+            const response = await EnderecoService.novo(logged_user.id, cep, bairro, rua, numero, complemento);
             res.setHeader("Access-Control-Allow-Origin", "*");
             return res.status(StatusCodes.OK).json(response);
         }catch (error) {

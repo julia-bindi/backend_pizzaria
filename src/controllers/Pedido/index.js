@@ -1,7 +1,7 @@
 const { novo } = require("./novo.controller")
-const { get } = require("./get.controller")
+const { deletar } = require("./delete.controller")
 
 module.exports = {
     novo,
-    get,
+    deletar,
 }

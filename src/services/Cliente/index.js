@@ -1,7 +1,7 @@
 const { login } = require("./login.service")
-const { novoCliente } = require("./novo.service")
+const { novo } = require("./novo.service")
 
 module.exports ={
     login,
-    novoCliente
+    novo
 }

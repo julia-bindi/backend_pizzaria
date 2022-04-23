@@ -1,5 +1,5 @@
-const { getProdutos } = require("./get.controller")
+const { get } = require("./get.controller")
 
 module.exports = {
-    getProdutos,
+    get,
 }

@@ -6,7 +6,7 @@ const { constants } = require("../../utils");
 const { clientesRepository } = require("../../repositories");
 const { promisify } = require("util");
 
-module.exports.novoCliente = async (nome, cpf, email, telefone, senha) => {
+module.exports.novo = async (nome, cpf, email, telefone, senha) => {
     const cliente = await clientesRepository.get({ email });
 
     if(!cliente){

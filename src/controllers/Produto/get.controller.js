@@ -2,10 +2,10 @@ const { StatusCodes } = require("http-status-codes")
 const { ProdutoService } = require("../../services")
 
 module.exports = {
-    getProdutos: async (req, res) => {
+    get: async (req, res) => {
         try {
             const tipo = req.params['tipo']
-            const response = await ProdutoService.getProdutos(tipo)
+            const response = await ProdutoService.get(tipo)
             res.setHeader("Access-Control-Allow-Origin", "*");
             return res.status(StatusCodes.OK).json(response)
         } catch (error) {

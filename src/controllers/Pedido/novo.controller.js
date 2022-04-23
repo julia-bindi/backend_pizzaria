@@ -1,24 +1,23 @@
 const { StatusCodes } = require("http-status-codes");
-const { ClienteService } = require("../../services");
+const { PedidosService } = require("../../services");
 const yup = require("yup");
 
 module.exports = {
     novo: async (req, res) =>{
         try{
             const schema = yup.object().shape({
-                nome: yup.string().required(),
-                cpf: yup.string().required(),
-                email: yup.string().required(),
-                telefone: yup.string().required(),
-                senha: yup.string().required(),
+                idEndereco: yup.number().required(),
+                produtos: yup.string().required(),
+                precoFinal: yup.number().required(),
+                comentario: yup.string().required(),
             });
 
             await schema.validate(req.body, {
                 stripUnknown: true,
               });
 
-            const { nome, cpf, email, telefone, senha } = req.body;
-            const response = await ClienteService.novo(nome, cpf, email, telefone, senha);
+            const { idEndereco, produtos, precoFinal, comentario } = req.body;
+            const response = await PedidosService.novo(idEndereco, produtos, precoFinal, comentario);
             res.setHeader("Access-Control-Allow-Origin", "*");
             return res.status(StatusCodes.OK).json(response);
         }catch (error) {

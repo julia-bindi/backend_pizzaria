@@ -5,14 +5,14 @@ const { promisify } = require("util");
 const { constants } = require("../../utils");
 
 module.exports = {
-    getEnderecos: async (req, res) => {
+    get: async (req, res) => {
         try {
             const [scheme, token]  = req.headers.authorization.split(" ");
 
             const verify = promisify(jwt.verify);
             const logged_user = await verify(token, constants.jwtToken);
 
-            const response = await EnderecoService.getEnderecos(logged_user.id)
+            const response = await EnderecoService.get(logged_user.id)
             return res.status(StatusCodes.OK).json(response)
         } catch (error) {
             console.error(error)

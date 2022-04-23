@@ -6,7 +6,7 @@ const { constants } = require("../../utils");
 const { enderecoRepository } = require("../../repositories");
 const { promisify } = require("util");
 
-module.exports.novoEndereco = async (idCliente, cep, bairro, rua, numero, complemento) => {
+module.exports.novo = async (idCliente, cep, bairro, rua, numero, complemento) => {
     const endereco = await enderecoRepository.get({ idCliente, cep, numero});
 
     if(endereco){
