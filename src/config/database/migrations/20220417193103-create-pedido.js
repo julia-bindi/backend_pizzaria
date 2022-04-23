@@ -30,7 +30,7 @@ module.exports = {
         type: Sequelize.STRING,
         validate:{
           isIn: {
-            args: [['processando', 'fazendo','entregue']]
+            args: [['processando', 'fazendo', 'entregue', 'cancelado']]
           }
         }
       },
