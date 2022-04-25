@@ -21,7 +21,6 @@ module.exports = {
             const response = await ClienteService.novo(nome, cpf, email, telefone, senha);
             res.setHeader("Access-Control-Allow-Origin", "*");
             res.setHeader("Access-Control-Allow-Headers", "*");
-            res.setHeader("Access-Control-Allow-Methods", "POST");
             return res.status(StatusCodes.OK).json(response);
         }catch (error) {
             console.error(error);
