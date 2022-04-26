@@ -19,7 +19,6 @@ module.exports = {
 
             const { nome, cpf, email, telefone, senha } = req.body;
             const response = await ClienteService.novo(nome, cpf, email, telefone, senha);
-            res.setHeader("Access-Control-Allow-Origin", "*");
             return res.status(StatusCodes.OK).json(response);
         }catch (error) {
             console.error(error);

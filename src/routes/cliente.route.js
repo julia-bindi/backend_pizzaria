@@ -10,6 +10,6 @@ const corsoptions = {
 }
 
 router.post("/login", ClienteController.login)
-router.post("/novo",cors(corsoptions), ClienteController.novo)
+router.post("/novo", ClienteController.novo)
 
 module.exports.cliente = router;
