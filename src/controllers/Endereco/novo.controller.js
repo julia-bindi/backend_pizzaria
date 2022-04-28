@@ -27,7 +27,6 @@ module.exports = {
             const logged_user = await verify(token, constants.jwtToken);
             
             const response = await EnderecoService.novo(logged_user.id, cep, bairro, rua, numero, complemento);
-            res.setHeader("Access-Control-Allow-Origin", "*");
             return res.status(StatusCodes.OK).json(response);
         }catch (error) {
             console.error(error);

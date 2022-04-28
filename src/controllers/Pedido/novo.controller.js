@@ -18,7 +18,6 @@ module.exports = {
 
             const { idEndereco, produtos, precoFinal, comentario } = req.body;
             const response = await PedidosService.novo(idEndereco, produtos, precoFinal, comentario);
-            res.setHeader("Access-Control-Allow-Origin", "*");
             return res.status(StatusCodes.OK).json(response);
         }catch (error) {
             console.error(error);

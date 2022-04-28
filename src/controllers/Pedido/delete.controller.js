@@ -8,7 +8,6 @@ module.exports = {
 
             const id = req.params['id'];
             const response = await PedidosService.deletar(id);
-            res.setHeader("Access-Control-Allow-Origin", "*");
             return res.status(StatusCodes.OK).json(response);
         }catch (error) {
             console.error(error);

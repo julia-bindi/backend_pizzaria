@@ -6,7 +6,6 @@ module.exports = {
         try {
             const tipo = req.params['tipo']
             const response = await ProdutoService.get(tipo)
-            res.setHeader("Access-Control-Allow-Origin", "*");
             return res.status(StatusCodes.OK).json(response)
         } catch (error) {
             console.error(error)
