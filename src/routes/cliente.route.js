@@ -1,7 +1,15 @@
 const router = require("express").Router();
+const cors = require("cors");
 const { ClienteController } = require("../controllers");
 
-router.post("/login", ClienteController.login)
-router.post("/novo", ClienteController.novo)
+const corsoptions = {
+    origin: "*",
+    methods: ['GET', 'POST', 'DELETE'],
+    allowedHeaders: ['Content-Type','Authorization'],
+    optionsSuccessStatus: 200
+  }
+
+router.post("/login", cors(corsoptions), ClienteController.login)
+router.post("/novo", cors(corsoptions), ClienteController.novo)
 
 module.exports.cliente = router;
