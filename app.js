@@ -4,7 +4,7 @@ const port = app.get("port");
 
 const corsoptions = {
   origin: "*",
-  methods: ['GET', 'POST'],
+  methods: ['GET', 'POST', 'DELETE'],
   allowedHeaders: ['Content-Type','Authorization'],
   optionsSuccessStatus: 200
 }
