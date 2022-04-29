@@ -5,7 +5,7 @@ const { ClienteController } = require("../controllers");
 
 const corsoptions = {
     origin: "*",
-    methods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
+    methods: ['POST','OPTIONS'],
     allowedHeaders: ['Content-Type','Authorization', 'Content-Length','X-Requested-With'],
     optionsSuccessStatus: 200
   }
