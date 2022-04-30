@@ -5,7 +5,6 @@ const { HelloController } = require("../controllers");
 const corsoptions = {
   origin: "*",
   methods: ['GET'],
-  allowedHeaders: ['Content-Type','Authorization', 'Content-Length','X-Requested-With'],
   optionsSuccessStatus: 200
 }
 

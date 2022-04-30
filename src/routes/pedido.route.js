@@ -9,7 +9,6 @@ router.use(isAuthorized)
 const corsoptions = {
   origin: "*",
   methods: ['POST', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type','Authorization', 'Content-Length','X-Requested-With'],
   optionsSuccessStatus: 200
 }
 

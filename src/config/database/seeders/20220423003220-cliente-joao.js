@@ -16,6 +16,7 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
+    await queryInterface.sequelize.query('ALTER SEQUENCE "Enderecos_id_seq"  RESTART WITH 1')
     return queryInterface.bulkDelete("Clientes", null, {});
   }
 };
