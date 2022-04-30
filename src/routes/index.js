@@ -13,5 +13,5 @@ module.exports = {
     produto,
     pedido,
     enderecoOPT,
-
+    pedidoOPT
 }
