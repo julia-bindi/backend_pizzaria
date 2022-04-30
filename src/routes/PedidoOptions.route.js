@@ -1,6 +1,6 @@
 const router = require("express").Router();
+const { StatusCodes } = require("http-status-codes");
 const cors = require("cors");
-const { PedidosController } = require("../controllers");
 
 const corsoptions = {
   origin: "*",
@@ -9,7 +9,6 @@ const corsoptions = {
   optionsSuccessStatus: 200
 }
 
-router.post("/novo", cors(corsoptions), PedidosController.novo)
-router.delete("/cancelar/:id", cors(corsoptions), PedidosController.deletar)
+router.options("/novo", cors(corsoptions), async (req, res) =>{ return res.status(StatusCodes.OK)})
 
 module.exports.pedido = router;

@@ -1,13 +1,14 @@
 const router = require("express").Router();
+const { StatusCodes } = require("http-status-codes");
 const cors = require("cors");
-const { ProdutosController } = require("../controllers");
 
 const corsoptions = {
   origin: "*",
-  methods: ['GET'],
+  methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type','Authorization', 'Content-Length','X-Requested-With'],
   optionsSuccessStatus: 200
 }
 
-router.get("/:tipo", cors(corsoptions), ProdutosController.get);
-module.exports.produto = router;
+router.options("/novo", cors(corsoptions), async (req, res) =>{ return res.status(StatusCodes.OK)})
+
+module.exports.endereco = router;
