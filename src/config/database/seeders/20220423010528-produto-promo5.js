@@ -8,7 +8,7 @@ module.exports = {
         nome: "Pizza calabresa + Refrigerante lata",
         descricao: "Aproveite!!",
         preco: 19.90,
-        imagem: null,
+        imagem: "https://drive.google.com/file/d/19E9EKSaihlfhdKl7vv8UYLAjIisG1RM7/view?usp=sharing",
         createdAt: new Date(),
         updatedAt: new Date(),
       },

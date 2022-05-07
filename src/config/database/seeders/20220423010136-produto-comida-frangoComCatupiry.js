@@ -8,7 +8,7 @@ module.exports = {
         nome: "Pizza Frango com Catupiry",
         descricao: "Este também está na lista dos mais pedidos da nossa pizzaria. E não é por menos, é uma combinação fenomenal. Desconfie de pessoas que não gostam de pizza de frango com catupiry.",
         preco: 22.90,
-        imagem: null,
+        imagem: "https://drive.google.com/file/d/1cUqIjklHZKVSJ0usg5Dg-U9KOx96wEa2/view?usp=sharing",
         createdAt: new Date(),
         updatedAt: new Date(),
       },

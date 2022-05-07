@@ -8,7 +8,7 @@ module.exports = {
         nome: "Pizza Portuguesa + Pizza Calabresa + Refrigerante 2L",
         descricao: "Trocas de sabores não são permitidas",
         preco: 46.90,
-        imagem: null,
+        imagem: "https://drive.google.com/file/d/19E9EKSaihlfhdKl7vv8UYLAjIisG1RM7/view?usp=sharing",
         createdAt: new Date(),
         updatedAt: new Date(),
       },

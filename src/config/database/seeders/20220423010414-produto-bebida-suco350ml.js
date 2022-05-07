@@ -8,7 +8,7 @@ module.exports = {
         nome: "Suco Lata",
         descricao: "Escolha seu sabor nos comentarios: Uva, Laranja, Goiaba, Pessego, Manga. Por padrão vai Laranja.",
         preco: 5.00,
-        imagem: null,
+        imagem: "https://drive.google.com/file/d/1Xr2O6cb3UPWzcIXdZSFn7_mFK0HbemNw/view?usp=sharing",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
