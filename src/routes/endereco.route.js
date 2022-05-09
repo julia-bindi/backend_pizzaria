@@ -14,6 +14,7 @@ const corsoptions = {
 
 router.options("/novo", cors(corsoptions), async (req, res) =>{ return res.status(StatusCodes.OK)})
 router.post("/novo", cors(corsoptions), EnderecosController.novo)
+router.options("/get", cors(corsoptions), async (req, res) =>{ return res.status(StatusCodes.OK)})
 router.get("/get", cors(corsoptions), EnderecosController.get)
 
 module.exports.endereco = router;
