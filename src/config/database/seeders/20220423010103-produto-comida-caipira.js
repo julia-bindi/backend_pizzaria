@@ -8,7 +8,7 @@ module.exports = {
         nome: "Pizza Caipira",
         descricao: "Frango, milho e catupiry, ou seja, não tem erro, né?",
         preco: 22.90,
-        imagem: "https://drive.google.com/file/d/1Zjfs-2Owazm2sXvYRthxmXXFPOwlZRov/view?usp=sharing",
+        imagem: "1Zjfs-2Owazm2sXvYRthxmXXFPOwlZRov",
         createdAt: new Date(),
         updatedAt: new Date(),
       },

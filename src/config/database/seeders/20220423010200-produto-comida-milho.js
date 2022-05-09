@@ -8,7 +8,7 @@ module.exports = {
         nome: "Pizza Milho",
         descricao: "Milho com muçarela ou catupiry. Pode parecer simples, mas estamos falando de uma pizza sensacional de gostosa. É difícil achar alguém que não goste.",
         preco: 19.90,
-        imagem: "https://drive.google.com/file/d/17QAEN5Z6b78kgZnAx-ahSIhKUnwl8nes/view?usp=sharing",
+        imagem: "17QAEN5Z6b78kgZnAx-ahSIhKUnwl8nes",
         createdAt: new Date(),
         updatedAt: new Date(),
       },

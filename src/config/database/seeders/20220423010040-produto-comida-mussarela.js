@@ -8,7 +8,7 @@ module.exports = {
         nome: "Pizza Mussarela",
         descricao: "Simples assim e perfeita assim. Não existem palavras para descrever o quão incrível ela é. Tudo na proporção certa para matar a fome com maestria.",
         preco: 19.90,
-        imagem: "https://drive.google.com/file/d/1aHumjBKBWx7Rqxh79y0QMArS3nB-4pBg/view?usp=sharing",
+        imagem: "1aHumjBKBWx7Rqxh79y0QMArS3nB-4pBg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
